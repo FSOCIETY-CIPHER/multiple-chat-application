@@ -39,7 +39,6 @@ public class ClientHandler implements Runnable{
             }
         }
     }
-
     public void broadcastMessage(String message){
         for(ClientHandler clientHandler: client){
             if(!clientHandler.equals(this)){

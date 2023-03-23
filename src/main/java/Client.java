@@ -50,14 +50,12 @@ public class Client {
             }
         }).start();
     }
-
     public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter your username:");
         String user = scanner.nextLine();
         Socket socket = new Socket("localhost", 2144);
         Client client = new Client(socket,user);
-
         client.ClientMessageReciever();
         client.ClientSendMessage();
 

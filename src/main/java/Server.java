@@ -11,9 +11,7 @@ public class Server {
     public void startServer() throws IOException, InterruptedException {
         while(!serverSocket.isClosed()){
             System.out.println("Waiting for client connection...");
-
             Socket socket = serverSocket.accept();
-
             System.out.println("Server Connected");
             ClientHandler clientHandler=new ClientHandler(socket);
             Thread t1 = new Thread(clientHandler);
